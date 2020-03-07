@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.10)
 project(leetcode CXX)
 
-if(NOT CMAKE_BUILD_TYPE)
+if (NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Release")
-endif()
+endif ()
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -31,16 +31,16 @@ set(CXX_FLAGS
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)
 set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS)
 
-if(CMAKE_BUILD_BITS EQUAL 32)
+if (CMAKE_BUILD_BITS EQUAL 32)
     list(APPEND CXX_FLAGS "-m32")
-endif()
-if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+endif ()
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     list(APPEND CXX_FLAGS "-Wno-null-dereference")
     list(APPEND CXX_FLAGS "-Wno-sign-conversion")
     list(APPEND CXX_FLAGS "-Wno-unused-local-typedef")
     list(APPEND CXX_FLAGS "-Wthread-safety")
     list(REMOVE_ITEM CXX_FLAGS "-rdynamic")
-endif()
+endif ()
 string(REPLACE ";" " " CMAKE_CXX_FLAGS "${CXX_FLAGS}")
 
 SET(CMAKE_C_FLAGS "-Wall -Wextra -Werror -Wno-unused-parameter -Woverloaded-virtual -Wpointer-arith -pipe -fPIC -ggdb -gdwarf-2 -Wno-deprecated -Wno-sign-compare")
@@ -56,7 +56,6 @@ include_directories(${PROJECT_SOURCE_DIR})
 string(TOUPPER ${CMAKE_BUILD_TYPE} BUILD_TYPE)
 message(STATUS "CXX_FLAGS = " ${CMAKE_CXX_FLAGS} " " ${CMAKE_CXX_FLAGS_${BUILD_TYPE}})
 
-add_subdirectory(src)
-
-
+add_subdirectory(src/interview)
+add_subdirectory(src/problem)
 

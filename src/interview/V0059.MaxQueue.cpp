@@ -17,7 +17,6 @@ class MaxQueue {
   void push_back(int value) {
     deque_.push_back(value);
     set_.insert(value);
-    set_.erase(set_.begin(), set_.find(value));
   }
 
   int pop_front() {
@@ -26,11 +25,8 @@ class MaxQueue {
     }
 
     auto front = deque_.front();
-    if (*set_.rbegin() == front)
-    {
-      set_.erase(set_.find(front));
-    }
     deque_.pop_front();
+    set_.erase(set_.find(front));
     return front;
   }
 

@@ -4,40 +4,53 @@
 
 #include <include/cplusplus.h>
 
-class MaxQueue {
+class MaxQueue
+{
  public:
-  MaxQueue() {
+  MaxQueue()
+  {
 
   }
 
-  int max_value() {
-    return set_.empty() ? - 1 : *set_.rbegin();
+  int max_value()
+  {
+    return deque_.empty() ? -1 : deque_.front();
   }
 
-  void push_back(int value) {
+  void push_back(int value)
+  {
+    queue_.push(value);
+    while (!deque_.empty() && value > deque_.back() ){
+      deque_.pop_back();
+    }
     deque_.push_back(value);
-    set_.insert(value);
   }
 
-  int pop_front() {
-    if (deque_.empty()) {
+  int pop_front()
+  {
+    if (queue_.empty()) {
       return -1;
     }
 
-    auto front = deque_.front();
-    deque_.pop_front();
-    set_.erase(set_.find(front));
+    auto front = queue_.front();
+    queue_.pop();
+
+    if (front == deque_.front())
+    {
+      deque_.pop_front();
+    }
+
     return front;
   }
 
  private:
   deque<int> deque_;
-  std::multiset<int> set_;
+  queue<int> queue_;
 };
 
 int32_t main()
 {
-  MaxQueue* obj = new MaxQueue();
+  MaxQueue *obj = new MaxQueue();
   int param_1 = obj->max_value();
   obj->push_back(1000);
   int param_3 = obj->pop_front();

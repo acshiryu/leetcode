@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
-add_executable(S0001.TwoSum S0001.TwoSum.cpp)
+add_executable(S0001_TwoSum S0001_TwoSum.cpp)
 
-add_executable(S0002.AddTwoNumbers S0002.AddTwoNumbers.cpp)
+add_executable(S0002_AddTwoNumbers S0002_AddTwoNumbers.cpp)
 
-add_executable(S0003.LongestSubstring S0003.LongestSubstring.cpp)
+add_executable(S0003_LongestSubstring S0003_LongestSubstring.cpp)
 
-add_executable(S0695.MaxAreaOfIsland S0695.MaxAreaOfIsland.cpp)
+add_executable(S0051_NQueens S0051_NQueens.cpp)
+
+add_executable(S0695_MaxAreaOfIsland S0695_MaxAreaOfIsland.cpp)

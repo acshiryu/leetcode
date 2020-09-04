@@ -18,7 +18,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "list_node.h"
 #include "debug.hpp"
+#include "list_node.h"
+#include "tree_node.h"
 
 using namespace std;

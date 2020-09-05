@@ -21,7 +21,7 @@ AllowAllConstructorInitializersOnNextLine: false
 # 允许函数所有参数申明在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: false
 # 允许短的块放在同一行
-AllowShortBlocksOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: false
 # 允许短的case标签放在同一行
 AllowShortCaseLabelsOnASingleLine: true
 # 允许短的函数放在同一行: None, InlineOnly(定义在类中), Empty(空函数), Inline(定义在类中，空函数), All
@@ -52,7 +52,7 @@ BreakBeforeBraces: Custom
 BraceWrapping:
   AfterCaseLabel: true
   AfterClass: true
-  AfterControlStatement: Always
+  AfterControlStatement: true
   AfterEnum: true
   AfterFunction: true
   AfterNamespace: true
@@ -116,7 +116,6 @@ IncludeCategories:
     Priority:        0
 # 缩进case
 IndentCaseLabels: false
-IndentGotoLabels: false
 IndentPPDirectives: BeforeHash
 # 缩进宽度
 IndentWidth: 4
@@ -151,7 +150,6 @@ SpaceBeforeInheritanceColon: true
 # 开圆括号之前添加一个空格: Never, ControlStatements, Always
 SpaceBeforeParens: ControlStatements
 SpaceBeforeRangeBasedForLoopColon: true
-SpaceBeforeSquareBrackets: false
 # 在空的圆括号中添加空格
 SpaceInEmptyParentheses: false
 # 在尾随的评论前添加的空格数(只适用于//)
@@ -160,13 +158,12 @@ SpacesBeforeTrailingComments: 2
 SpacesInAngles: false
 # 在C风格类型转换的括号中添加空格
 SpacesInCStyleCastParentheses: false
-SpacesInConditionalStatement: false
 # 在圆括号的(后和)前添加空格
 SpacesInParentheses: false
 # 在方括号的[后和]前添加空格，lambda表达式和未指明大小的数组的声明不受影响
 SpacesInSquareBrackets: false
 # 标准: Cpp03, Cpp11, Auto
-Standard: c++17
+Standard: Cpp11
 # tab宽度
 TabWidth: 4
 # 使用tab字符: Never, ForIndentation, ForContinuationAndIndentation, Always

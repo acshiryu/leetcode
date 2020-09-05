@@ -8,6 +8,8 @@ add_executable(S0003_LongestSubstring S0003_LongestSubstring.cpp)
 
 add_executable(S0051_NQueens S0051_NQueens.cpp)
 
+add_executable(S0060_PermutationSequence S0060_PermutationSequence.cpp)
+
 add_executable(S0257_BinaryTreePaths S0257_BinaryTreePaths.cpp)
 
 add_executable(S0695_MaxAreaOfIsland S0695_MaxAreaOfIsland.cpp)

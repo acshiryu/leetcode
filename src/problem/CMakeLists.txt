@@ -14,4 +14,6 @@ add_executable(S0107_BinaryTreeLevelOrderTraversalII S0107_BinaryTreeLevelOrderT
 
 add_executable(S0257_BinaryTreePaths S0257_BinaryTreePaths.cpp)
 
+add_executable(S0347_TopKFrequentElements S0347_TopKFrequentElements.cpp)
+
 add_executable(S0695_MaxAreaOfIsland S0695_MaxAreaOfIsland.cpp)
